@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
-class Categories extends StatefulWidget {
-  const Categories({super.key});
+class Boutique extends StatefulWidget {
+  const Boutique({super.key});
 
   @override
-  State<Categories> createState() => _MyWidgetState();
+  State<Boutique> createState() => _MyWidgetState();
 }
 
-class _MyWidgetState extends State<Categories> {
+class _MyWidgetState extends State<Boutique> {
   final categories = [
-    {"title": "Coiffures", "icon": Icons.cut},
-    {"title": "Boutique", "icon": Icons.store},
+    {"title": "Shampoings", "icon": Icons.shower},
+    {"title": "Huiles/Crèmes", "icon": Icons.water_drop},
+    {"title": "Bonnets/Cap", "icon": Icons.checkroom},
+    {"title": "Accessoires", "icon": Icons.cut}
+
   ];
 
   @override

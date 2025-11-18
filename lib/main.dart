@@ -1,4 +1,5 @@
-import 'package:app_flutter_01/pages/CategoriesPage.dart';
+import 'package:app_flutter_01/pages/BoutiquePage.dart';
+import 'package:app_flutter_01/pages/RendezVousPage.dart';
 import 'package:flutter/material.dart';
 import 'package:app_flutter_01/pages/HomePage.dart';
 
@@ -31,7 +32,8 @@ setCurrentIndex(int index){
         ),
         body: [
           HomePage(),
-          Categories()
+          Boutique(),
+          RendezVous()
         ][_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
@@ -43,7 +45,11 @@ setCurrentIndex(int index){
            ),
            BottomNavigationBarItem(
             icon: Icon(Icons.category),
-            label: "Accueil"
+            label: "Boutique"
+           ),
+           BottomNavigationBarItem(
+            icon: Icon(Icons.calendar_month),
+            label: "Rendez-vous"
            ),
         ]),
       )

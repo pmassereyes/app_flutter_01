@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:app_flutter_01/pages/CategoriesPage.dart';
+import 'package:app_flutter_01/pages/BoutiquePage.dart';
 class HomePage extends StatelessWidget {
   const HomePage({
     super.key,
@@ -20,15 +20,7 @@ class HomePage extends StatelessWidget {
               textAlign: TextAlign.center,
               ),
               Text("La première application faite uniquement pour tes locks"),
-              ElevatedButton(onPressed: () {
-                Navigator.push(
-                  context,
-                  PageRouteBuilder(
-                    pageBuilder: (_,_,_,) => Categories()
-                  )
-                  );
-              }, 
-              child: Text("Voir les catégories"))
+             
           ],
         ),
       );
