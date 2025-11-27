@@ -1,10 +1,19 @@
 import 'package:app_flutter_01/pages/BoutiquePage.dart';
 import 'package:app_flutter_01/pages/RendezVousPage.dart';
+import 'package:app_flutter_01/pages/SettingsPage.dart';
 import 'package:flutter/material.dart';
 import 'package:app_flutter_01/pages/HomePage.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
-  runApp(MyApp()); 
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -16,8 +25,9 @@ class MyApp extends StatefulWidget {
 
 
 class _MyAppState extends State<MyApp> {
+  
   int _currentIndex = 0;
-setCurrentIndex(int index){
+void setCurrentIndex(int index){
   setState((){
      _currentIndex = index;
   });
@@ -28,8 +38,19 @@ setCurrentIndex(int index){
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("MyLocks"),
-        ),
+  leading: Builder(
+    builder: (context) => IconButton(
+      icon: Icon(Icons.settings),
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Settings()),
+        );
+      },
+    ),
+  ),
+  title: Text("MyLocks"),
+),
         body: [
           HomePage(),
           Boutique(),

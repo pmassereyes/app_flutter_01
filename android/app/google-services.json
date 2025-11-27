@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "626080289010",
+    "project_id": "mylocks",
+    "storage_bucket": "mylocks.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626080289010:android:b737bfd57b8cb6e994006b",
+        "android_client_info": {
+          "package_name": "com.example.app_flutter_01"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjEgLsgl8f0s2PxW8C1lT_91XLu04D6EM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

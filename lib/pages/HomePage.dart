@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:app_flutter_01/pages/BoutiquePage.dart';
 class HomePage extends StatelessWidget {
   const HomePage({
     super.key,
